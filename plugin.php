@@ -4,8 +4,8 @@ Plugin Name: Random Keywords
 Plugin URI: http://yourls.org/
 Description: Assign random keywords to shorturls, like bitly (sho.rt/hJudjK)
 Version: 1.1
-Author: Ozh
-Author URI: http://ozh.org/
+Author: Tom Yam
+Author URI: https://github.com/tomyam1
 */
 
 /* Release History:
@@ -21,12 +21,14 @@ global $ozh_random_keyword;
 * CONFIG: EDIT THIS
 */
 
-/* Length of random keyword */
+// Length of random keyword
 $ozh_random_keyword['length'] = 5;
 
-/* The characters set type
-    https://github.com/YOURLS/YOURLS/blob/master/includes/functions.php#L1424
- */
+// The characters set type
+// Changes the random key generation of yourls yo use just 23456789bcdfghjkmnpqrstvwxyz characters.
+// (no vowels to make no offending word, no 0/1/o/l to avoid confusion between letters & digits)
+// https://github.com/YOURLS/YOURLS/blob/1.9.1/includes/functions.php#L715
+
 $ozh_random_keyword['type'] = '1';
 
 /*
